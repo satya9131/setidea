@@ -1,0 +1,40 @@
+/*---toc-css---*/
+.T-cont{
+	border: 1px solid #53A600;
+	border-radius: 10px;
+	width: 80%;
+	margin:auto;
+	overflow: hidden;
+	background: #e5eecc;
+}
+.T-head{
+	width:100%:
+	height:40px;
+	line-height:40px;
+	text-align: center;
+}
+#blink{
+	color: green;
+	font-weight: 600;
+}
+.T-body{
+	width: 90%;
+	margin: auto;
+	padding: 10px;
+	margin-left:15px;
+	display:none;
+}
+.T-body li{
+	margin-top:10px;
+}
+.T-body li a{
+	text-decoration: underline; 
+	color: black;
+	text-decoration-color: green;
+}
+@media(min-width: 600px){
+	 .T-cont{
+		width: 300px;
+	 }
+}
+
