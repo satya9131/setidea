@@ -1,0 +1,107 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: serif;
+}
+
+.wrapper{
+  width: 500px;
+  margin: 80px auto 0;
+  box-shadow: 0 0 5px #fff;
+  border: 1px solid #ebebeb;
+}
+.wrapper .accordion_wrap .accordion_header{
+  width: 100%;
+  height: 50px;
+  background: #F4F4F4;
+  padding: 15px;
+  color: #0064FA;
+  font-weight: 400;
+  border-bottom: 2px solid #0064FA;
+  position: relative;
+  cursor: pointer;
+}
+.acc-label{
+	width: 100%;
+	height: 50px; 
+	padding: 15px;
+	background: #F4F4F4; 
+	color: #0077b5;
+	font-weight: bold;
+	border-bottom: 2px solid #0077b5;
+}
+.wrapper .accordion_wrap:first-child .accordion_header{
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.wrapper .accordion_wrap:last-child .accordion_header{
+  border-bottom: 2px solid transparent;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.wrapper .accordion_wrap:last-child .accordion_header:hover{
+  border-bottom: 2px solid transparent;
+}
+.wrapper .accordion_wrap .accordion_header:before,
+.wrapper .accordion_wrap .accordion_header:after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: 20px;
+  height: 2px;
+  background: #0064FA;
+}
+.wrapper .accordion_wrap .accordion_header:hover{
+  color: #01645d;
+  border-color: #01645d;
+}
+.wrapper .accordion_wrap .accordion_header:hover:before,
+.wrapper .accordion_wrap .accordion_header:hover:after{
+  background: #01645d;
+}
+.wrapper .accordion_wrap .accordion_header:after{
+  transform: rotate(-90deg);
+  transition: all 0.5s ease;
+}
+.wrapper .accordion_wrap .accordion_body{
+  width: 100%;
+  height: 0px;
+  transition: all 0.5s ease;
+  background: #0077b5;
+  overflow: hidden;
+  font-family: serif !important;
+}
+.wrapper .accordion_wrap .accordion_body p{
+  padding: 15px;
+  font-size: 15px;
+  line-height: 22px;
+  color: #fff;
+}
+.wrapper .accordion_wrap .accordion_header.active{
+  color: #0077b5; 
+  border-color: #0077b5;
+}
+.wrapper .accordion_wrap:last-child .accordion_header.active{
+  border-bottom: 2px solid #0077b5;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.wrapper .accordion_wrap .accordion_header.active:before,
+.wrapper .accordion_wrap .accordion_header.active:after{
+  background: #0077b5;
+}
+.wrapper .accordion_wrap .accordion_header.active:after{
+  transform: rotate(0deg);
+}
+.wrapper .accordion_wrap .accordion_header.active + .accordion_body{
+  height: 180px;
+}
+@media(max-width:600px){
+	.wrapper{
+		  width: 90%; 
+		  margin: 50px auto;
+	}
+}
