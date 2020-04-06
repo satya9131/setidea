@@ -101,7 +101,7 @@
 }
 @media(max-width:600px){
 	.wrapper{
-		  width: 90%; 
+		  width:110%; 
 		  margin: 50px auto;
 	}
 }
